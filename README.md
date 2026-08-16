@@ -18,3 +18,13 @@ contract ContributionTracker {
         contributions[msg.sender] += msg.value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract StakingWithdraw {
+    mapping(address => bool) public canWithdraw;
+
+    function enableWithdraw() external {
+        canWithdraw[msg.sender] = true;
+    }
+}
