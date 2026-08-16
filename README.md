@@ -8,3 +8,13 @@ contract BidLog {
         lastBid = amount;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ContributionTracker {
+    mapping(address => uint256) public contributions;
+
+    function contribute() external payable {
+        contributions[msg.sender] += msg.value;
+    }
+}
