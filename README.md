@@ -58,3 +58,13 @@ contract TokenURI {
         tokenURI[tokenId] = uri;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract SafeTransferFlag {
+    bool public safeMode = true;
+
+    function setSafeMode(bool enabled) external {
+        safeMode = enabled;
+    }
+}
