@@ -38,3 +38,13 @@ contract APRStorage {
         apr = _apr;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract APRStorage {
+    uint256 public apr; // in basis points
+
+    function setAPR(uint256 _apr) external {
+        apr = _apr;
+    }
+}
