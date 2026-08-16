@@ -68,3 +68,13 @@ contract SafeTransferFlag {
         safeMode = enabled;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract RoyaltyReceiver {
+    address public receiver;
+
+    function setReceiver(address _receiver) external {
+        receiver = _receiver;
+    }
+}
