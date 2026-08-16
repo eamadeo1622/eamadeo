@@ -48,3 +48,13 @@ contract APRStorage {
         apr = _apr;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract TokenURI {
+    mapping(uint256 => string) public tokenURI;
+
+    function setURI(uint256 tokenId, string calldata uri) external {
+        tokenURI[tokenId] = uri;
+    }
+}
