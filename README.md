@@ -108,3 +108,13 @@ contract HiddenURI {
         hiddenURI = uri;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract RoyaltiesEnabled {
+    bool public royaltiesEnabled = true;
+
+    function setRoyaltiesEnabled(bool enabled) external {
+        royaltiesEnabled = enabled;
+    }
+}
