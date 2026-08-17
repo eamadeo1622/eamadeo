@@ -118,3 +118,13 @@ contract RoyaltiesEnabled {
         royaltiesEnabled = enabled;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract AnimationURI {
+    mapping(uint256 => string) public animationURI;
+
+    function setAnimationURI(uint256 tokenId, string calldata uri) external {
+        animationURI[tokenId] = uri;
+    }
+}
