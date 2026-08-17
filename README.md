@@ -98,3 +98,13 @@ contract PublicMint {
         publicMintEnabled = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract HiddenURI {
+    string public hiddenURI = "ipfs://hidden";
+
+    function setHiddenURI(string calldata uri) external {
+        hiddenURI = uri;
+    }
+}
