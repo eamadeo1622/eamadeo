@@ -78,3 +78,13 @@ contract RoyaltyReceiver {
         receiver = _receiver;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract OfferAccepted {
+    mapping(uint256 => bool) public accepted;
+
+    function accept(uint256 tokenId) external {
+        accepted[tokenId] = true;
+    }
+}
