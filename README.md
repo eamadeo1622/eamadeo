@@ -222,3 +222,13 @@ contract QuestProgress {
         progress[msg.sender][questId] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract TeamScore {
+    mapping(uint256 => uint256) public score;
+
+    function addScore(uint256 teamId, uint256 amount) external {
+        score[teamId] += amount;
+    }
+}
