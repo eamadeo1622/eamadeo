@@ -148,3 +148,13 @@ contract StreakCounter {
         streak[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract Referrer {
+    mapping(address => address) public referredBy;
+
+    function setReferrer(address referrer) external {
+        referredBy[msg.sender] = referrer;
+    }
+}
