@@ -192,3 +192,13 @@ contract BadgeCounter {
         badgeCount[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ItemQuantity {
+    mapping(address => mapping(uint256 => uint256)) public quantity;
+
+    function addItem(uint256 itemId, uint256 amount) external {
+        quantity[msg.sender][itemId] += amount;
+    }
+}
