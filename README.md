@@ -182,3 +182,13 @@ contract SeasonPoints {
         points[season][msg.sender] += amount;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract BadgeCounter {
+    mapping(address => uint256) public badgeCount;
+
+    function addBadge() external {
+        badgeCount[msg.sender]++;
+    }
+}
