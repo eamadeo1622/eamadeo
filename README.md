@@ -202,3 +202,13 @@ contract ItemQuantity {
         quantity[msg.sender][itemId] += amount;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract CraftCount {
+    mapping(address => uint256) public crafts;
+
+    function craft() external {
+        crafts[msg.sender]++;
+    }
+}
