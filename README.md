@@ -172,3 +172,13 @@ contract HighScore {
         }
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract SeasonPoints {
+    mapping(uint256 => mapping(address => uint256)) public points;
+
+    function addPoints(uint256 season, uint256 amount) external {
+        points[season][msg.sender] += amount;
+    }
+}
