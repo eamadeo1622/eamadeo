@@ -212,3 +212,13 @@ contract CraftCount {
         crafts[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract QuestProgress {
+    mapping(address => mapping(uint256 => uint256)) public progress;
+
+    function updateProgress(uint256 questId, uint256 value) external {
+        progress[msg.sender][questId] = value;
+    }
+}
