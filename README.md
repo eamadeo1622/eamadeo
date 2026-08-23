@@ -138,3 +138,13 @@ contract AnimationURI {
         animationURI[tokenId] = uri;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract StreakCounter {
+    mapping(address => uint256) public streak;
+
+    function increaseStreak() external {
+        streak[msg.sender]++;
+    }
+}
