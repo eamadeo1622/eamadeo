@@ -231,4 +231,13 @@ contract TeamScore {
     function addScore(uint256 teamId, uint256 amount) external {
         score[teamId] += amount;
     }
+}// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ClanPoints {
+    mapping(string => uint256) public points;
+
+    function addPoints(string calldata clan, uint256 amount) external {
+        points[clan] += amount;
+    }
 }
