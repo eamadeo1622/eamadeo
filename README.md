@@ -241,3 +241,13 @@ contract ClanPoints {
         points[clan] += amount;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract HealthPoints {
+    mapping(address => uint256) public hp;
+
+    function setHP(uint256 value) external {
+        hp[msg.sender] = value;
+    }
+}
