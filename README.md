@@ -261,3 +261,13 @@ contract IntelligenceStat {
         intelligence[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract CriticalChance {
+    mapping(address => uint256) public critChance;
+
+    function setCrit(uint256 value) external {
+        critChance[msg.sender] = value;
+    }
+}
