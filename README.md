@@ -321,3 +321,13 @@ contract PrestigeLevel {
         prestige[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract MeritPoints {
+    mapping(address => uint256) public merit;
+
+    function addMerit(uint256 value) external {
+        merit[msg.sender] += value;
+    }
+}
