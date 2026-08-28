@@ -301,3 +301,13 @@ contract PerceptionStat {
         perception[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract KarmaPoints {
+    mapping(address => int256) public karma;
+
+    function addKarma(int256 value) external {
+        karma[msg.sender] += value;
+    }
+}
