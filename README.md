@@ -331,3 +331,13 @@ contract MeritPoints {
         merit[msg.sender] += value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ValorScore {
+    mapping(address => uint256) public valor;
+
+    function setValor(uint256 value) external {
+        valor[msg.sender] = value;
+    }
+}
