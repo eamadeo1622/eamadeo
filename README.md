@@ -311,3 +311,13 @@ contract KarmaPoints {
         karma[msg.sender] += value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract PrestigeLevel {
+    mapping(address => uint256) public prestige;
+
+    function setPrestige(uint256 value) external {
+        prestige[msg.sender] = value;
+    }
+}
