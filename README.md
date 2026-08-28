@@ -341,3 +341,13 @@ contract ValorScore {
         valor[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract InfamyPoints {
+    mapping(address => uint256) public infamy;
+
+    function addInfamy(uint256 value) external {
+        infamy[msg.sender] += value;
+    }
+}
