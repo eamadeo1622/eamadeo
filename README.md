@@ -361,3 +361,13 @@ contract LikesReceived {
         likes[user]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ReportCount {
+    mapping(address => uint256) public reports;
+
+    function addReport() external {
+        reports[msg.sender]++;
+    }
+}
