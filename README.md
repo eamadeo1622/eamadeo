@@ -411,3 +411,13 @@ contract CollectionCount {
         collections[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract FilterCount {
+    mapping(address => uint256) public filters;
+
+    function addFilter() external {
+        filters[msg.sender]++;
+    }
+}
