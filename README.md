@@ -351,3 +351,13 @@ contract InfamyPoints {
         infamy[msg.sender] += value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract LikesReceived {
+    mapping(address => uint256) public likes;
+
+    function addLike(address user) external {
+        likes[user]++;
+    }
+}
