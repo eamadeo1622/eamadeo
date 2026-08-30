@@ -401,3 +401,13 @@ contract CheckInCount {
         checkIns[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract CollectionCount {
+    mapping(address => uint256) public collections;
+
+    function createCollection() external {
+        collections[msg.sender]++;
+    }
+}
