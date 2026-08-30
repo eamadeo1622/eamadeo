@@ -421,3 +421,13 @@ contract FilterCount {
         filters[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract DownloadCount {
+    mapping(address => uint256) public downloads;
+
+    function addDownload() external {
+        downloads[msg.sender]++;
+    }
+}
