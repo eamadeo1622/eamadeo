@@ -391,3 +391,13 @@ contract EventCount {
         eventsCreated[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract CheckInCount {
+    mapping(address => uint256) public checkIns;
+
+    function checkIn() external {
+        checkIns[msg.sender]++;
+    }
+}
