@@ -371,3 +371,13 @@ contract ReportCount {
         reports[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract BlockCount {
+    mapping(address => uint256) public blocked;
+
+    function addBlock() external {
+        blocked[msg.sender]++;
+    }
+}
