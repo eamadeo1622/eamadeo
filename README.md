@@ -431,3 +431,13 @@ contract DownloadCount {
         downloads[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract RestoreCount {
+    mapping(address => uint256) public restores;
+
+    function addRestore() external {
+        restores[msg.sender]++;
+    }
+}
