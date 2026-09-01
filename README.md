@@ -471,3 +471,13 @@ contract BridgeCount {
         bridges[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract LiquidityRemoveCount {
+    mapping(address => uint256) public removes;
+
+    function removeLiquidity() external {
+        removes[msg.sender]++;
+    }
+}
