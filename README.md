@@ -441,3 +441,13 @@ contract RestoreCount {
         restores[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract FlagCount {
+    mapping(address => uint256) public flags;
+
+    function addFlag() external {
+        flags[msg.sender]++;
+    }
+}
