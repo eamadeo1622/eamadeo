@@ -451,3 +451,13 @@ contract FlagCount {
         flags[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract UnsubscribeCount {
+    mapping(address => uint256) public unsubscriptions;
+
+    function unsubscribe() external {
+        unsubscriptions[msg.sender]++;
+    }
+}
