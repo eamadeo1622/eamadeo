@@ -521,3 +521,13 @@ contract SepoliaDeploy {
         deploys[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract BasenameStorage {
+    mapping(address => string) public basename;
+
+    function setBasename(string calldata name) external {
+        basename[msg.sender] = name;
+    }
+}
