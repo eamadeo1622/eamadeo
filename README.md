@@ -511,3 +511,13 @@ contract TxCount {
         txs[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract SepoliaDeploy {
+    mapping(address => uint256) public deploys;
+
+    function addDeploy() external {
+        deploys[msg.sender]++;
+    }
+}
