@@ -530,4 +530,13 @@ contract BasenameStorage {
     function setBasename(string calldata name) external {
         basename[msg.sender] = name;
     }
+}// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract BuilderRole {
+    mapping(address => bool) public hasRole;
+
+    function unlock() external {
+        hasRole[msg.sender] = true;
+    }
 }
