@@ -501,3 +501,13 @@ contract VerifyCount {
         verifications[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract TxCount {
+    mapping(address => uint256) public txs;
+
+    function addTx() external {
+        txs[msg.sender]++;
+    }
+}
