@@ -540,3 +540,13 @@ contract BuilderRole {
         hasRole[msg.sender] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract GithubConnected {
+    mapping(address => bool) public connected;
+
+    function connect() external {
+        connected[msg.sender] = true;
+    }
+}
