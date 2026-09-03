@@ -590,3 +590,13 @@ contract Commits50 {
         reached[msg.sender] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract FollowBase {
+    mapping(address => bool) public followed;
+
+    function mark() external {
+        followed[msg.sender] = true;
+    }
+}
