@@ -848,3 +848,13 @@ contract Erc165Pin {
         completed[msg.sender] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract BundlerPin {
+    mapping(address => bool) public completed;
+
+    function complete() external {
+        completed[msg.sender] = true;
+    }
+}
